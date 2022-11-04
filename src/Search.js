@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import "./weather.css";
+import "./search.css";
 
 export default function Search(props) {
   const [city, setCity] = useState("");
@@ -35,8 +35,7 @@ export default function Search(props) {
   }
 
   return (
-    <div className="Search">
-      <h1>Weather Search Engine</h1>
+    <div className="Search container">
       <div className="city-search">
         <form onSubmit={searchSubmit}>
           <input type="search" onChange={inputCity} />
