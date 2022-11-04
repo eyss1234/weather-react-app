@@ -1,0 +1,23 @@
+.Search ul {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.Search .input-box {
+  border-radius: 8px;
+  margin-right: 8px;
+  width: 240px;
+  height: 40px;
+  background-color: rgb(219, 219, 219);
+  border: none;
+}
+
+.Search .button {
+ height: 40px;
+ border-radius: 8px;
+ border: none;
+ background-color: rgb(114, 114, 209);
+ color: white;
+ font-weight: bold;
+}
+

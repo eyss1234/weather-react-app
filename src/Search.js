@@ -35,14 +35,17 @@ export default function Search(props) {
   }
 
   return (
-    <div className="Search container">
+    <div className="Search">
+      <h2>Weather Search</h2>
       <div className="city-search">
         <form onSubmit={searchSubmit}>
-          <input type="search" onChange={inputCity} />
-          <input className="button" type="submit" value="Search" />
+          <input className="input-box ps-3 pe-2" type="search" onChange={inputCity} />
+          <input className="button px-3" type="submit" value="Search" />
         </form>
       </div>
-      <div>{temp}</div>
+      <div className="pt-3">
+        {temp}
+      </div>
     </div>
   );
 }
