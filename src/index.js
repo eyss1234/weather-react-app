@@ -3,18 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Search from './Search';
 import App from './App';
-import Weather from './Weather';
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Weather
-  city="London"
-  currentTime="12:15 pm"
-  currentDate="Friday, Sep "
-  mainTemp={35}
-/>
+    <App />
   </React.StrictMode>
 );
 
