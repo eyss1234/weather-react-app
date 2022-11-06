@@ -13,6 +13,7 @@ export default function Weather(props) {
       <div className="main-temp-container">
         <h2>{props.mainTemp}°C</h2>
       </div>
+      <p><a href="https://github.com/eyss1234/weather-react-app" target="_blank">Open-source code</a>, by Emily Sato</p>
     </div>
   );
 }
