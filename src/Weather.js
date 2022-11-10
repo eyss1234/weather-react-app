@@ -1,9 +1,12 @@
 import React from "react";
+import Search from './Search'
 import "./weather.css";
 
 export default function Weather(props) {
   return (
+    
     <div className="Weather">
+      <Search />
       <div className="city-container">
         <h1>{props.city}</h1>
         <ul>

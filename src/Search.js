@@ -37,9 +37,9 @@ export default function Search(props) {
   return (
     <div className="Search">
       <div className="city-search">
-        <form onSubmit={searchSubmit}>
+        <form className="d-flex justify-content-between" onSubmit={searchSubmit}>
           <input className="input-box ps-3 pe-2" type="search" onChange={inputCity} />
-          <input className="button px-3" type="submit" value="Search" />
+          <input className="button px-4" type="submit" value="Search" />
         </form>
       </div>
       <div className="pt-3">
