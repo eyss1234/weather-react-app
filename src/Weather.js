@@ -30,7 +30,6 @@ export default function Weather(props) {
           </ul>
         </div>
       </div>
-      <p><a href="https://github.com/eyss1234/weather-react-app">Open-source code</a>, by Emily Sato</p>
     </div>
   );
 }

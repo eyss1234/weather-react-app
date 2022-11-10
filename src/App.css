@@ -1,0 +1,15 @@
+.App {
+  max-width: 800px;
+  margin: 30px auto;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.App h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.App h2 {
+  font-size: 32px;
+}
