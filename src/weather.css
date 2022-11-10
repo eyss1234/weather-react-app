@@ -1,9 +1,4 @@
-.Weather .weather-container {
-    display: flex;
-    justify-content: center;
-    border: 1px solid white;
-    border-radius: 8px;
-    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.2);
-    width: 800px;
+.Weather h1 {
+  font-weight: 600;
 }
   

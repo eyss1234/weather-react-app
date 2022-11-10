@@ -36,7 +36,6 @@ export default function Search(props) {
 
   return (
     <div className="Search">
-      <h2>Weather Search</h2>
       <div className="city-search">
         <form onSubmit={searchSubmit}>
           <input className="input-box ps-3 pe-2" type="search" onChange={inputCity} />
