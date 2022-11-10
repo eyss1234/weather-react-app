@@ -5,7 +5,7 @@ export default function Weather(props) {
   return (
     <div className="Weather">
       <div className="city-container">
-        <h1w>{props.city}</h1w>
+        <h1>{props.city}</h1>
         <ul>
           <li>{props.currentDate} {props.currentTime}</li>
           <li>Mostly Cloudy</li>

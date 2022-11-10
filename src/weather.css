@@ -1,4 +1,19 @@
+.Weather {
+  border: 1px solid rgb(198, 198, 198);
+  border-radius: 16px;
+  padding: 20px;
+}
+
 .Weather h1 {
   font-weight: 600;
 }
+
+.Weather ul {
+  padding: 0;
+}
+
+.Weather li {
+  list-style: none;
+}
+
   
