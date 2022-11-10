@@ -38,7 +38,7 @@ export default function Search(props) {
     <div className="Search">
       <div className="city-search">
         <form className="d-flex justify-content-between" onSubmit={searchSubmit}>
-          <input className="input-box ps-3 pe-2" type="search" onChange={inputCity} />
+          <input className="input-box ps-3 pe-2" type="search" onChange={inputCity} autoFocus="on"/>
           <input className="button px-4" type="submit" value="Search" />
         </form>
       </div>
