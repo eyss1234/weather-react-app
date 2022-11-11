@@ -16,11 +16,15 @@ export default function Weather(props) {
       </div>
       <div className="main-temp-container row">
         <div className="col-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="Partly Cloudy"
-          />
-          <h2>{props.mainTemp}°C</h2> 
+          <div className="d-flex">
+            <img
+              className="weather-img"
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="Partly Cloudy"
+            />
+            <h2 className="temperature">{props.mainTemp}
+            <span className="unit">°C</span></h2> 
+          </div>
         </div>
         <div className="col-6">
           <ul>
