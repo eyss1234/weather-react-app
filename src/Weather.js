@@ -52,7 +52,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let city = "London";
+    let city = props.city;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=14f9cf6fd094b0c0a439f2ffc2e74947&units=metric`;
     axios.get(url).then(handleResponse);
 
