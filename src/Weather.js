@@ -5,14 +5,20 @@ import "./weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false })
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState(props.defaultCity);
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function search() {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=14f9cf6fd094b0c0a439f2ffc2e74947&units=metric`;
+    axios.get(url).then(handleResponse);
   }
 
-  function handleCityChange(e) {
-    setCity(e.target.value);
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
   }
 
 
@@ -43,10 +49,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let city = props.city;
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=14f9cf6fd094b0c0a439f2ffc2e74947&units=metric`;
-    axios.get(url).then(handleResponse);
-
+    search();
     return "Loading...";
   } 
 }
