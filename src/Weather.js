@@ -1,11 +1,20 @@
 import React , { useState } from "react";
-import Search from './Search'
-import FormattedDate from './formattedDate'
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false })
+  const [city, setCity] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
+  function handleCityChange(e) {
+    setCity(e.target.value);
+  }
+
 
   function handleResponse(response){
     // console.log(response.data);
@@ -24,35 +33,13 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        
-        <div className="city-container">
-          <h1>{weatherData.city}</h1>
-          <ul>
-            <li>
-              <FormattedDate date={weatherData.date} />
-            </li>
-            <li className="text-capitalize">{weatherData.description}</li>
-          </ul>
+        <div className="city-search">
+          <form className="d-flex justify-content-between" onSubmit={handleSubmit}>
+            <input className="input-box ps-3 pe-2" type="search" onChange={handleCityChange} autoFocus="on"/>
+            <input className="button px-4" type="submit" value="Search" />
+          </form>
         </div>
-        <div className="main-temp-container row">
-          <div className="col-6">
-            <div className="d-flex">
-              <img
-                className="weather-img"
-                src={weatherData.iconUrl}
-                alt={weatherData.description}
-              />
-              <h2 className="temperature">{Math.round(weatherData.temperature)}
-              <span className="unit">°C</span></h2> 
-            </div>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind}km/h</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData}/>
       </div>
     );
   } else {
