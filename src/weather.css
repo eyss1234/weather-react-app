@@ -12,10 +12,8 @@
   list-style: none;
 }
 
-.Weather .weather-img {
+.Weather .icon {
   margin-right: 10px;
-  width: auto;
-  height: 80px;
 }
 
 .Weather .temperature {
