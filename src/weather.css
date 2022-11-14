@@ -31,7 +31,7 @@
 
 .Weather a {
   text-decoration: none;
-  color:rgb(187, 68, 13);
+  color:rgba(187, 68, 13, .4);
 }
 
 .Weather .input-box {
