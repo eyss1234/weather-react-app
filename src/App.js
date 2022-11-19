@@ -9,7 +9,7 @@ function App() {
             defaultCity="London"
             />
         <footer>
-          <p className='p-2'><a href="https://github.com/eyss1234/weather-react-app">Open-source code</a>, by Emily Sato</p>
+          <p className='p-2'><a href="https://github.com/eyss1234/weather-react-app" target="_blank" rel="noopener noreferrer">Open-source code</a>, by Emily Sato</p>
         </footer>
       </div>
     </div>
